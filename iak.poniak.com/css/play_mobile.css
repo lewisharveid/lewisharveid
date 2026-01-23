@@ -1,0 +1,50 @@
+@media screen and (max-width: 1000px) {
+  #playPage{
+    .footer {
+      .mainImg {
+        max-width: 300px;
+      }
+      
+    }
+  }
+  
+}
+@media screen and (max-width: 500px) {
+  .font1 {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  .font2 {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .font3 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .font4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .font5 {
+    font-size: 4rem;
+    font-weight: 800;
+  }
+  #playPage {
+    .footer {
+      .mainImg {
+        max-width: 200px;
+      }
+      .gameMsg:nth-of-type(2),
+      .gameMsg:nth-of-type(4) {
+        display: none;
+      }
+    }
+
+    .SimilarGame {
+      grid-auto-rows: initial;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+  }
+}
