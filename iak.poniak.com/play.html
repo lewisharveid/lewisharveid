@@ -8,50 +8,19 @@
     <link rel="icon" href="logo.png" />
     <link rel="stylesheet" href="prod-css/play.css" />
     <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
-        <script>
-        window.googletag = window.googletag || { cmd: [] };
-        let anchorSlot = null;
-        googletag.cmd.push(function () {
-            googletag.defineSlot('/23353201487/iak.poniak.com_Web_Banner_320x50_1', [320, 50], 'div-gpt-ad-1780992953469-0').addService(googletag.pubads());
-            googletag.defineSlot('/23353201487/iak.poniak.com_Web_Banner_300x250_1', [300, 250], 'div-gpt-ad-1780992903839-0').addService(googletag.pubads());
-            // 底部锚定广告
-            anchorSlot = googletag.defineOutOfPageSlot(
-                '/23353201487/iak.poniak.com_Web_Anchor_1',
-                googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR
-            );
-            if (anchorSlot) {
-                anchorSlot.addService(googletag.pubads());
-            }
-
-            googletag.setConfig({
-                singleRequest: true,
-                collapseDiv: 'ON_NO_FILL'
-            });
-            googletag.enableServices();
-
-            googletag.display('div-gpt-ad-1780992953469-0');
-            googletag.display('div-gpt-ad-1780992903839-0');
-
-            if (anchorSlot) {
-                googletag.display(anchorSlot);
-            }
-        });
-
-        function showAnchor() {
-            if (anchorSlot) {
-                googletag.cmd.push(function () {
-                    googletag.display(anchorSlot);
-                });
-            }
-        }
+    <script>
+    window.googletag = window.googletag || {cmd: []};
+    googletag.cmd.push(function() {
+        googletag.defineSlot('/23353201487/iak.poniak.com_display', [[300, 100], [300, 250], [300, 75], [320, 100], [300, 31], [300, 50], [320, 50]], 'div-gpt-ad-1781094134735-0').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+    });
     </script>
 </head>
 
 <body>
     <div class="playPage loadingAnimation" id="playPage">
-        <div style="width:100%; text-align:center;">
-            <div id="div-gpt-ad-1780992953469-0" style="min-width: 320px; min-height: 50px;"></div>
-        </div>
+
         <div class="gameBanner" onclick="gotoPlayGame()">
             <img hidden class="bgdimg gameImgUrl" src="" alt="" />
             
@@ -76,18 +45,18 @@
                     </div>
                 </div>
 
-
-
-
                 <div class="gameTitle font4"></div>
                 <div class="description font2"></div>
 
             </div>
         </div>
         
-        <div style="width:100%; text-align:center;">
-            <div id="div-gpt-ad-1780992903839-0" style="min-width: 300px; min-height: 250px;"></div>
-        </div>                
+        <!-- /23353201487/iak.poniak.com_display -->
+        <div id='div-gpt-ad-1781094134735-0' style='min-width: 300px; min-height: 31px;'>
+            <script>
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1781094134735-0'); });
+            </script>
+        </div>            
 
         <div class="playButton font3" onclick="gotoPlayGame()">
             <img src="./assets/kaishi.png" alt="">
@@ -102,12 +71,6 @@
             </div>
         </a>
     </div>
-
-    <script>
-        window.addEventListener('load', function () {
-            showAnchor();
-        });
-    </script>
 </body>
 <script type="module">
     import { getGamesListApi, getGamesListCategory } from "./assets/js/business.js";
